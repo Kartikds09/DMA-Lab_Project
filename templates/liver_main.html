@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liver Cirrhosis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/static/Style/liver_main.css" />
+</head>
+
+<body>
+    <nav class="navbar navbara navbar-dark navbar-static-top">
+        <div class="container-fluid head-container">
+            <span class="navbar-brand mb-3 h1 head-title mx-3 nav-head">Liver Cirhosis Prediction</span>
+            <ul>
+
+                <a class="head-item1" href="{{url_for('liver_main')}}">Home</a>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid container-img-1">
+        <img src="/static/Images/image3.jpg" alt="" class="img-fluid img-1" />
+    </div>
+
+    <div class="heading-1 d-flex justify-content-center my-5">
+        <h1>What is Liver Cirhosis?</h1>
+    </div>
+
+    <div class="row justify-content-center align-items-center container-diabetes d-flex">
+        <div class="col-4 mx-4 px-4 img-2">
+            <!-- <img src="{{ url_for('static', filename='Images/dia.avif') }}" alt="" class="img-fluid mid-text-img" /> -->
+            <img src="/static/Images/sirhosis.webp" alt="" class="img-fluid mid-text-img" />
+        </div>
+        <div class="container-fluid col-5 mid-text col-lg-6 mx-0">
+            <p>
+                Cirrhosis of the liver is permanent scarring that damages your liver and interferes with its functioning. It can lead to
+                liver failure. Cirrhosis is the result of persistent liver damage over many years. Alcohol and drugs, viruses and
+                metabolic factors are the most common causes.
+            </p>
+
+            <p>
+                It is the late stage liver disease, in which healthy liver tissue has been gradually replaced with scar tissue. This is a result
+                of long-term, chronic hepatitis. Hepatitis is inflammation in your liver, which has many causes. When inflammation is
+                ongoing, your liver attempts to repair itself by scarring. But too much scar tissue prevents your liver from working
+                properly.
+        </div>
+    </div>
+
+    <div class="heading-2 d-flex justify-content-center">
+        <h1>What are the different stages of liver cirrhosis?</h1>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="col-10">
+            <ol class="heading-2-list">
+                <p class="m-4" style="color: rgb(0, 128, 0)">
+                    It mainly has 3 major stages:
+                </p>
+                <li>Compensated Cirrhosis:</li>
+                <p>
+                    In this stage, the liver is still able to perform its essential functions despite the presence of significant scarring.
+                    Patients may not experience symptoms initially, or they may have mild symptoms such as fatigue or weakness. However,
+                    liver function tests may indicate abnormalities. Complications such as varices (enlarged veins in the esophagus or
+                    stomach) may develop in this stage.
+                </p>
+                <br>
+                <li>Decompensated Cirrhosis:</li>
+                <p>
+                    This stage occurs when the liver is significantly damaged and can no longer perform its functions adequately.
+                    Decompensated cirrhosis is characterized by the development of complications such as ascites, hepatic encephalopathy,
+                    variceal bleeding, and jaundice. Symptoms may become more pronounced and can include abdominal swelling, confusion, easy
+                    bruising or bleeding, and yellowing of the skin and eyes (jaundice).
+                </p>
+                <br>
+                <li>End-Stage Cirrhosis:</li>
+                <p>
+                    Also known as terminal cirrhosis or advanced cirrhosis, this stage is characterized by severe liver dysfunction and
+                    failure. The liver's ability to function is severely impaired, leading to life-threatening complications such as
+                    hepatorenal syndrome (kidney failure secondary to liver failure), severe ascites, profound hepatic encephalopathy, and
+                    increased susceptibility to infections. Liver transplantation may be the only treatment option for individuals with
+                    end-stage cirrhosis.
+                </p>
+               
+            </ol>
+        </div>
+    </div>
+
+    <section class="container-fluid">
+        <div class="heading-1 d-flex justify-content-center mt-5">
+            <h1>Predict whether you have Liver Cirrhosis or not?</h1>
+        </div>
+        <div class="heading-1 d-flex justify-content-center my-2">
+            <form action="{{url_for('liver_form')}}" method="post">
+                <button type="submit" class="btn button-end">Predict Now</button>
+            </form>
+        </div>
+        <div class="heading-1 d-flex justify-content-center my-4">
+            <!-- <img src="{{ url_for('static', filename='Images/detect.webp') }}" alt="" class="img-last img-fluid" /> -->
+            <img src="" alt="" class="img-last img-fluid" />
+        </div>
+    </section>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $("#mainNavbar");
+            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+    });
+</script>
+
+</html>
